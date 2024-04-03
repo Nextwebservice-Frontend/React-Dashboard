@@ -6,7 +6,7 @@ const Profile = () => {
   
   return (
     <div className="lg:ml-10">
-      <h1 className="my-10 font-bold text-3xl">Personal Profile</h1>
+      <h1 className="my-10 font-bold text-3xl">Personal - Profile</h1>
 
       <div className="flex flex-col md:flex-row gap-2 ">
         {/* user details part */}
