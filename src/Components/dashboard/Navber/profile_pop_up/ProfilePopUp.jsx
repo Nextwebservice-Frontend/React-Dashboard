@@ -1,9 +1,9 @@
 import avater from '../../../../assets/avator.jpg'
 import pepole from '../../../../assets/5509366.png'
 import { MdOutlineLogout } from "react-icons/md";
-const ProfilePopUp = ({showProfieOptions}) => {
+const ProfilePopUp = ({showProfiePopUp}) => {
     return (
-        <div className={`p-4 shadow mt-10 pr-24 absolute right-10 top-9 bg-white ${showProfieOptions ? "popup":"hidden"}`}>
+        <div className={`p-4 shadow mt-10 pr-24 absolute right-10 top-9 bg-white ${showProfiePopUp ? "popup":"hidden"}`}>
             <div className=' flex justify-start items-center p-4 gap-3'>
                 <img className="w-8 h-8 rounded-full cursor-pointer" src={avater} alt="" />
                 <span>
@@ -19,7 +19,7 @@ const ProfilePopUp = ({showProfieOptions}) => {
                 </button>
                 <button className='flex justify-start items-center gap-3 text-gray-500 text-xl'>
                     <MdOutlineLogout className='text-2xl'/>
-                    pepole
+                    profile
                 </button>
             </div>
         </div>

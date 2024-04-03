@@ -4,9 +4,11 @@ import { CgMenuGridO } from "react-icons/cg";
 import avater from '../../../assets/avator.jpg'
 import ProfilePopUp from "./profile_pop_up/ProfilePopUp";
 import { useState } from "react";
+import ShortcutPopUp from "./Shortcut_pop_up/ShortcutPopUp";
 const Navber = () => {
     // states 
-    const [showProfieOptions,setShowprofileOptions]=useState(true)
+    const [showProfiePopUp, setShowprofilePopUp] = useState(false)
+    const [showSortcutPopUp, setshowSortcutPopUp] = useState(false)
     return (
         <>
             <div className="flex justify-between items-center mx-10 box-border px-8 shadow-xl py-6">
@@ -19,11 +21,18 @@ const Navber = () => {
                 <div className="flex justify-end items-center gap-4">
                     <FaUserGroup className="text-2xl text-gray-600 mt-1 cursor-pointer" />
                     <FaStore className="text-2xl text-gray-600 mt-1 cursor-pointer" />
-                    <CgMenuGridO className="text-2xl text-gray-600 mt-1 cursor-pointer" />
-                    <img onClick={()=>setShowprofileOptions(!showProfieOptions)} className="w-8 h-8 rounded-full cursor-pointer" src={avater} alt="profile pic" />
+                    <CgMenuGridO onClick={() => {
+                        setShowprofilePopUp(false)
+                        setshowSortcutPopUp(!showSortcutPopUp)
+                    }} className="text-2xl text-gray-600 mt-1 cursor-pointer" />
+                    <img onClick={() => {
+                        setShowprofilePopUp(!showProfiePopUp)
+                        setshowSortcutPopUp(false)
+                    }} className="w-8 h-8 rounded-full cursor-pointer" src={avater} alt="profile pic" />
                 </div>
             </div>
-            <ProfilePopUp showProfieOptions={showProfieOptions}/>
+            <ProfilePopUp showProfiePopUp={showProfiePopUp} />
+            <ShortcutPopUp showSortcutPopUp={showSortcutPopUp} />
         </>
     )
 }
