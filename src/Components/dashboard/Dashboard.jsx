@@ -40,26 +40,20 @@ const Dashboard = () => {
 
 
 
-                    <p className="text-[#93909e] my-6 text-sm px-5">
-                        APPS & PAGES
-                    </p>
+                    
 
-                    <Page_Apps />
+                    
                     <Ecommerce />
                     <Academy />
                     <Logistic />
 
 
-                    <p className="text-[#93909e] my-6 text-sm px-5">
-                        COMPONENTS
-                    </p>
+                   
 
                     <Card />
                     <Extendedui />
                     <Icons />
-                    <p className="text-[#93909e] my-6 text-sm px-5">
-                        Chart & MAPS
-                    </p>
+                   
 
 
                     <Charts />
