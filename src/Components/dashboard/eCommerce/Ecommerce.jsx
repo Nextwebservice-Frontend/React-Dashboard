@@ -1,73 +1,37 @@
-import { Accordion, AccordionDetails, AccordionSummary, Typography } from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
-import FiberManualRecordOutlinedIcon from '@mui/icons-material/FiberManualRecordOutlined';
-
+import { MdAddShoppingCart } from "react-icons/md";
+import { FaRegCircle } from "react-icons/fa";
 const Ecommerce = () => {
     return (
         <div>
-            <Accordion
-                className="border"
+            <div className="collapse collapse-arrow ">
+                <input type="radio" name="my-accordion-2" defaultChecked />
+                <div className="collapse-title flex items-center gap-2 text-[#7e7e7e]">
+                    <MdAddShoppingCart />  eCommerce
+                </div>
+                <div className="collapse-content">
+                    <p className="flex gap-2 items-center text-[12px] text-[#7e7e7e] font-semibold p-2 rounded-lg hover:bg-slate-100">
 
-            >
-                <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel1-content"
-                    id="panel1-header"
-                    className="text-[14px] font-semibold "
-                >
-                    <AddShoppingCartOutlinedIcon sx={{ mr: "10px", mb: "1px",color:"#7e7e7e" }} />
+                        <FaRegCircle /> Analytics
+                    </p>
+                    <p className="flex gap-2 items-center text-[12px] text-[#7e7e7e] font-semibold p-2 rounded-lg hover:bg-slate-100">
 
-                    <Typography fontSize="large"  sx={{color:"#7e7e7e"}}>
-                        eCommerce
-                    </Typography>
-                </AccordionSummary>
-                <AccordionDetails className="space-y-4">
-                    <Typography
-                        component="p"
-                        className="text-[12px] text-[#7e7e7e] font-semibold p-2 rounded-lg hover:bg-slate-100 "
-                    >
-                        <FiberManualRecordOutlinedIcon fontSize="small" sx={{ mt: "-5px" }} /> Dashboard
-                    </Typography>
-                    <Typography
-                        component="p"
-                        className="text-[12px] text-[#7e7e7e] font-semibold p-2 rounded-lg hover:bg-slate-100"
-                    >
-                        <FiberManualRecordOutlinedIcon fontSize="small" sx={{ mt: "-5px" }} /> Product
-                    </Typography>
-                    <Typography
-                        component="p"
-                        className="text-[12px] text-[#7e7e7e] font-semibold p-2 rounded-lg hover:bg-slate-100"
-                    >
-                        <FiberManualRecordOutlinedIcon fontSize="small" sx={{ mt: "-5px" }} /> Order
-                    </Typography>
-                    <Typography
-                        component="p"
-                        className="text-[12px] text-[#7e7e7e] font-semibold p-2 rounded-lg hover:bg-slate-100"
-                    >
-                        <FiberManualRecordOutlinedIcon fontSize="small" sx={{ mt: "-5px" }} /> Customer
-                    </Typography>
-                    <Typography
-                        component="p"
-                        className="text-[12px] text-[#7e7e7e] font-semibold p-2 rounded-lg hover:bg-slate-100"
-                    >
-                        <FiberManualRecordOutlinedIcon fontSize="small" sx={{ mt: "-5px" }} /> Manage Reviews
-                    </Typography>
-                    <Typography
-                        component="p"
-                        className="text-[12px] text-[#7e7e7e] font-semibold p-2 rounded-lg hover:bg-slate-100"
-                    >
-                        <FiberManualRecordOutlinedIcon fontSize="small" sx={{ mt: "-5px" }} /> Referrals
-                    </Typography>
-                    <Typography
-                        component="p"
-                        className="text-[12px] text-[#7e7e7e] font-semibold p-2 rounded-lg hover:bg-slate-100"
-                    >
-                        <FiberManualRecordOutlinedIcon fontSize="small" sx={{ mt: "-5px" }} /> Settings
-                    </Typography>
+                        <FaRegCircle /> CRM
+                    </p>
+                    <p className="flex gap-2 items-center text-[12px] text-[#7e7e7e] font-semibold p-2 rounded-lg hover:bg-slate-100">
 
-                </AccordionDetails>
-            </Accordion>
+                        <FaRegCircle /> eCommerce
+                    </p>
+                    <p className="flex gap-2 items-center text-[12px] text-[#7e7e7e] font-semibold p-2 rounded-lg hover:bg-slate-100">
+
+                        <FaRegCircle /> Logistics
+                    </p>
+                    <p className="flex gap-2 items-center text-[12px] text-[#7e7e7e] font-semibold p-2 rounded-lg hover:bg-slate-100">
+
+                        <FaRegCircle /> Academy
+                    </p>
+
+                </div>
+            </div>
         </div>
     );
 };
