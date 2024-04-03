@@ -11,7 +11,7 @@ const Navber = () => {
     const [showSortcutPopUp, setshowSortcutPopUp] = useState(false)
     return (
         <>
-            <div className="flex justify-between items-center mx-10 box-border px-8 shadow-xl py-6">
+            <div className="flex justify-between items-center mx-10 box-border px-8 shadow-xl py-5">
                 <div className="flex justify-start items-center gap-4">
                     <IoIosMenu className="text-3xl text-gray-600 mt-1 cursor-pointer" />
                     <p className="text-2xl">

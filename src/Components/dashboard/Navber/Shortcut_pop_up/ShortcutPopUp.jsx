@@ -8,7 +8,7 @@ import { BsCash } from "react-icons/bs";
 import { MdMeetingRoom } from "react-icons/md";
 const ShortcutPopUp = ({showSortcutPopUp}) => {
     return (
-        <div className={`absolute shadow-lg rounded-lg right-32 top-9 mt-10 bg-white ${showSortcutPopUp ? "popup":"hidden"}`}>
+        <div className={`absolute shadow-lg rounded-lg border right-32 top-9 mt-10 bg-white ${showSortcutPopUp ? "popup":"hidden"}`}>
             <span className='flex justify-between items-center min-w-80 max-w-80 text-lg p-3'>
                 Shortcut
                 <button>
