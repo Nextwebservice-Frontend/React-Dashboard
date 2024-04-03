@@ -13,20 +13,20 @@ import Icons from "./Icons/Icons";
 import Charts from "./Charts/Charts";
 import Maps from "./Maps/Maps";
 import './scrollbar.css'
-import { useState } from "react";
+import { useContext, useState } from "react";
 import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBulletedOutlined';
+import { contextData } from "../../Providers/ContextProviders/ContextProviders";
+import { IoIosMenu } from "react-icons/io";
 
 // eslint-disable-next-line react/prop-types
 const Dashboard = () => {
-
-    const [show, setShow] = useState(false)
-    
+const {setShow,show}=useContext(contextData)
     return (
-        <div className="w-full">
+        <div className="max-w-[320px] lg:w-full absolute lg:relative">
             <button
                 onClick={() => setShow(!show)}
-                className={`p-2 ml-5 bg-purple-500 text-zinc-200 font-bold rounded-full flex  absolute top-4 lg:hidden float  `}>
-                <FormatListBulletedOutlinedIcon />
+                className={`p-2 ml-5 text-gray-500 font-bold rounded-full flex  absolute top-4 lg:hidden float  `}>
+                <IoIosMenu />
             </button>
 
             <div
