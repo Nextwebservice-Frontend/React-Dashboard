@@ -14,11 +14,11 @@ const Navber = () => {
             <div className="flex justify-between items-center lg:mx-5 xl:mx-10 mx-auto box-border px-8 shadow-xl py-5">
                 <div className="flex justify-start items-center gap-4">
                     <IoIosMenu className="text-3xl lg:block hidden text-gray-600 mt-1 cursor-pointer" />
-                    <p className="text-2xl lg:ml-0 ml-6">
+                    <p className="text-2xl lg:block hidden">
                         Dashboard
                     </p>
                 </div>
-                <div className="flex justify-end items-center gap-4">
+                <div className="flex justify-end items-center gap-4 ">
                     <FaUserGroup className="text-2xl text-gray-600 mt-1 cursor-pointer" />
                     <FaStore className="text-2xl text-gray-600 mt-1 cursor-pointer" />
                     <CgMenuGridO onClick={() => {
@@ -28,7 +28,7 @@ const Navber = () => {
                     <img onClick={() => {
                         setShowprofilePopUp(!showProfiePopUp)
                         setshowSortcutPopUp(false)
-                    }} className="w-8 h-8 rounded-full cursor-pointer" src={avater} alt="profile pic" />
+                    }} className="md:w-8 md:h-8 h-7 w-7 rounded-full cursor-pointer" src={avater} alt="profile pic" />
                 </div>
             </div>
             <ProfilePopUp showProfiePopUp={showProfiePopUp} />
