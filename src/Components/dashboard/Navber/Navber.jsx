@@ -10,12 +10,12 @@ const Navber = () => {
     // states 
     const [showProfiePopUp, setShowprofilePopUp] = useState(false)
     const [showSortcutPopUp, setshowSortcutPopUp] = useState(false)
-    const {setShow,show,setShowText,showText}=useContext(contextData)
+    const { setShow, show, setShowText, showText } = useContext(contextData)
     return (
         <>
-            <div className="flex justify-between items-center w-full box-border px-8 shadow-xl py-5">
+            <div className="flex justify-between items-center w-full lg:mx-5 xl:mx-10 mx-auto box-border px-8 shadow-xl py-5">
                 <div className="flex justify-start items-center gap-4">
-                    <IoIosMenu onClick={()=>{
+                    <IoIosMenu onClick={() => {
                         setShow(!show)
                         setShowText(!showText)
                     }} className="text-3xl lg:block hidden text-gray-600 mt-1 cursor-pointer" />
@@ -36,8 +36,10 @@ const Navber = () => {
                     }} className="md:w-8 md:h-8 h-7 w-7 rounded-full cursor-pointer" src={avater} alt="profile pic" />
                 </div>
             </div>
-            <ProfilePopUp showProfiePopUp={showProfiePopUp} />
-            <ShortcutPopUp showSortcutPopUp={showSortcutPopUp} />
+            <div className=" w-full lg:mx-5 xl:mx-10 mx-auto box-border px-8 relative">
+                <ProfilePopUp showProfiePopUp={showProfiePopUp} />
+                <ShortcutPopUp showSortcutPopUp={showSortcutPopUp} />
+            </div>
         </>
     )
 }

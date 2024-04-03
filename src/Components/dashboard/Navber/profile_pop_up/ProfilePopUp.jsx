@@ -3,7 +3,7 @@ import pepole from '../../../../assets/5509366.png'
 import { MdOutlineLogout } from "react-icons/md";
 const ProfilePopUp = ({showProfiePopUp}) => {
     return (
-        <div className={`py-4 shadow mt-10 rounded border absolute md:right-10 right-0 top-[30px] bg-white ${showProfiePopUp ? "popup":"hidden"}`}>
+        <div className={`py-4 shadow mt-10 rounded border absolute md:right-10 right-0 -top-12 bg-white ${showProfiePopUp ? "popup":"hidden"}`}>
             <div className=' flex justify-start items-center p-4 gap-3 pr-24'>
                 <img className="w-8 h-8 rounded-full cursor-pointer" src={avater} alt="" />
                 <span>
