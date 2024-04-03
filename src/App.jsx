@@ -7,13 +7,12 @@ function App() {
 
   return (
     <>
-      <div className="flex">
-
-        <div className="w-[12%]">
+      <div className="flex justify-start gap-[1%]">
+        <div className="w-[14%]">
           <Dashboard />
         </div>
 
-        <div className="w-[88%]">
+        <div className="w-[85%]">
           <Home />
         </div>
 

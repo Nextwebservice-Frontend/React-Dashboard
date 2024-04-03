@@ -1,10 +1,10 @@
-
+import Navber from "../dashboard/Navber/Navber";
 
 const Home = () => {
     return (
-        <div className="">
-            
-        </div>
+        <>
+        <Navber />
+        </>
     );
 };
 

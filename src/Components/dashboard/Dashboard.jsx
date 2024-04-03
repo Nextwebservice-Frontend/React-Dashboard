@@ -22,7 +22,7 @@ const Dashboard = () => {
     const [show, setShow] = useState(false)
     
     return (
-        <div className="absolute">
+        <div className="w-full">
             <button
                 onClick={() => setShow(!show)}
                 className={`p-2 ml-5 bg-purple-500 text-zinc-200 font-bold rounded-full flex  absolute top-4 lg:hidden float  `}>
