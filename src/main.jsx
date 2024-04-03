@@ -7,7 +7,6 @@ import {
 } from "react-router-dom";
 import Main from './Layout/Main';
 import Profile from './Components/dashboard/Profile/Profile';
-import MyModal from './Components/dashboard/Profile/MyModal';
 
 
 
@@ -16,18 +15,9 @@ const router = createBrowserRouter([
     path: "/",
     element:<Main></Main>,
     children : [
-
-      // {
-      //   path: '/',
-      //   element :<Dashboard></Dashboard>
-      // },
       {
         path: '/profile',
         element :<Profile></Profile>
-      },
-      {
-        path: '/modal',
-        element :<MyModal></MyModal>
       }
 
     ]
