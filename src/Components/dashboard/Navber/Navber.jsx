@@ -3,17 +3,22 @@ import { FaStore, FaUserGroup } from "react-icons/fa6";
 import { CgMenuGridO } from "react-icons/cg";
 import avater from '../../../assets/avator.jpg'
 import ProfilePopUp from "./profile_pop_up/ProfilePopUp";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import ShortcutPopUp from "./Shortcut_pop_up/ShortcutPopUp";
+import { contextData } from "../../../Providers/ContextProviders/ContextProviders";
 const Navber = () => {
     // states 
     const [showProfiePopUp, setShowprofilePopUp] = useState(false)
     const [showSortcutPopUp, setshowSortcutPopUp] = useState(false)
+    const {setShow,show,setShowText,showText}=useContext(contextData)
     return (
         <>
-            <div className="flex justify-between items-center lg:mx-5 xl:mx-10 mx-auto box-border px-8 shadow-xl py-5">
+            <div className="flex justify-between items-center w-full box-border px-8 shadow-xl py-5">
                 <div className="flex justify-start items-center gap-4">
-                    <IoIosMenu className="text-3xl lg:block hidden text-gray-600 mt-1 cursor-pointer" />
+                    <IoIosMenu onClick={()=>{
+                        setShow(!show)
+                        setShowText(!showText)
+                    }} className="text-3xl lg:block hidden text-gray-600 mt-1 cursor-pointer" />
                     <p className="text-2xl lg:block hidden">
                         Dashboard
                     </p>

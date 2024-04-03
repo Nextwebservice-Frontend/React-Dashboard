@@ -20,11 +20,14 @@ import { IoIosMenu } from "react-icons/io";
 
 // eslint-disable-next-line react/prop-types
 const Dashboard = () => {
-const {setShow,show}=useContext(contextData)
+const {setShow,show,showText,setShowText}=useContext(contextData)
     return (
-        <div className={`${show?'w-auto':'w-3'} max-w-[320px] absolute lg:w-full lg:relative`}>
+        <div className={`${show?'w-auto':'w-3'} max-w-[320px] absolute lg:w-full lg:relative ${showText?'':'w-14'}`}>
             <button
-                onClick={() => setShow(!show)}
+                onClick={() => {
+                    setShowText(true)
+                    setShow(!show)
+                }}
                 className={`p-2 ml-5 text-gray-500 font-bold rounded-full flex  absolute top-4 lg:hidden  text-3xl  `}>
                 <IoIosMenu />
             </button>
