@@ -1,3 +1,4 @@
+import BlogList from "../BlogList/BlogList";
 import Navber from "../dashboard/Navber/Navber";
 import Notice from "../dashboard/Notice/Notice";
 
@@ -6,6 +7,7 @@ const Home = () => {
         <>
             <Navber />
             <Notice />
+            <BlogList />
         </>
     );
 };
