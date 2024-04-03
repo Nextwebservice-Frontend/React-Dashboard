@@ -97,6 +97,7 @@ const Profile = () => {
                         required
                       />
                       {/* defaultValue={Email} */}
+                      {/* defaultValue={Email} */}
                     </div>
                   </div>
 
