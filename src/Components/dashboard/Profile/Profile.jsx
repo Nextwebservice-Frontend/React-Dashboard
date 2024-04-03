@@ -1,12 +1,22 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-
+import { Dialog, Transition } from "@headlessui/react";
+import { Fragment} from "react";
 
 const Profile = () => {
-  
+  let [isOpen, setIsOpen] = useState(false);
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
   return (
     <div className="lg:ml-10">
-      <h1 className="my-10 font-bold text-3xl">Personal - Profile</h1>
+      <h1 className="my-10 font-bold text-3xl">Personal  Profile</h1>
 
       <div className="flex flex-col md:flex-row gap-2 ">
         {/* user details part */}
@@ -35,9 +45,99 @@ const Profile = () => {
           </div>
 
           <div className="py-2 border w-full text-center">
-            <button className="w-[300px]    h-[40px] border bg-slate-700  text-white rounded-xl">
+            <button type="button" onClick={openModal} className="w-[300px]    h-[40px] border bg-slate-700  text-white rounded-xl">
               Password change
             </button>
+
+            {/* for modal  */}
+
+            {/* <div className="fixed inset-0 flex items-center justify-center">
+              <button
+                type="button"
+                onClick={openModal}
+                className="rounded-md bg-black/20 px-4 py-2 text-sm font-medium text-white hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
+              >
+                Password change
+              </button>
+            </div> */}
+
+            <Transition appear show={isOpen} as={Fragment}>
+              <Dialog as="div" className="relative z-10" onClose={closeModal}>
+                <Transition.Child
+                  as={Fragment}
+                  enter="ease-out duration-300"
+                  enterFrom="opacity-0"
+                  enterTo="opacity-100"
+                  leave="ease-in duration-200"
+                  leaveFrom="opacity-100"
+                  leaveTo="opacity-0"
+                >
+                  <div className="fixed inset-0 bg-black/25" />
+                </Transition.Child>
+
+                <div className="fixed inset-0 overflow-y-auto">
+                  <div className="flex min-h-full items-center justify-center p-4 text-center">
+                    <Transition.Child
+                      as={Fragment}
+                      enter="ease-out duration-300"
+                      enterFrom="opacity-0 scale-95"
+                      enterTo="opacity-100 scale-100"
+                      leave="ease-in duration-200"
+                      leaveFrom="opacity-100 scale-100"
+                      leaveTo="opacity-0 scale-95"
+                    >
+                      <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                        <Dialog.Title
+                          as="h3"
+                          className="text-lg font-medium leading-6 text-gray-900"
+                        >
+                          Payment Update
+                        </Dialog.Title>
+                        <hr className="mt-4" />
+                        <div className="mt-2">
+                          <h1>Old Password</h1>
+                          <input type="password " placeholder="Old Password" className="input input-bordered  w-full" />
+                        </div>
+
+                        <div className="flex gap-2">
+                        <div className="mt-2">
+                          <h1>New Password</h1>
+                          <input type="password" placeholder="New Password" className="input input-bordered w-full max-w-xs" />
+                        </div>
+
+                        <div className="mt-2">
+                          <h1>Confirm Password</h1>
+                          <input type="password" placeholder="Confirm Password" className="input input-bordered w-full max-w-xs" />
+                        </div>
+
+                        </div>
+
+                        
+
+                        <div className="mt-4 ">
+                          <button
+                            type="button"
+                            className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                            onClick={closeModal}
+                          >
+                            Close
+                          </button>
+
+                          <button
+                            
+                            className="ml-4 inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                            
+                          >
+                            Update
+                          </button>
+
+                        </div>
+                      </Dialog.Panel>
+                    </Transition.Child>
+                  </div>
+                </div>
+              </Dialog>
+            </Transition>
           </div>
         </div>
 
@@ -66,7 +166,7 @@ const Profile = () => {
                         className="input input-bordered w-[390px] md:w-[420px]"
                         required
                       />
-                       {/* defaultValue={Name} */}
+                      {/* defaultValue={Name} */}
                     </div>
                     {/* Mobile */}
                     <div className="form-control pl-4">
@@ -113,7 +213,6 @@ const Profile = () => {
                         alt=""
                       />
                       <input type="file" id="myFile" name="filename"></input>
-                      
                     </div>
                   </div>
                 </div>
@@ -132,8 +231,6 @@ const Profile = () => {
                     className="input input-bordered"
                     required
                   />
-
-
                 </div>
 
                 {/* button */}
