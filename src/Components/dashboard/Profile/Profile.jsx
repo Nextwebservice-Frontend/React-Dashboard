@@ -91,7 +91,7 @@ const Profile = () => {
                           as="h3"
                           className="text-lg font-medium leading-6 text-gray-900"
                         >
-                          Payment Update
+                          Payment Updatejhgh
                         </Dialog.Title>
                         <hr className="mt-4" />
                         <div className="mt-2">
