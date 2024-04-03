@@ -14,7 +14,7 @@ const Notice = () => {
                         প্রতিষ্ঠানের ডাটা সুরক্ষার কথা মাথায় রেখে আমরা সফটওয়্যারের ডিলিট অপশন বন্ধ রেখেছি , আমরা আপনাদের অনুরোধ করবো ডিলিট না করে ইনাক্টিভ করুন। কিন্তু প্রতিষ্ঠানের আবেদনের ভিত্তিতে ডিলিট অপশনটি পুনরায় চালু করা যেতে পারে।
                     </p>
                 </div>
-                <div className='w-full h-full border rounded'>
+                <div className='w-full h-full border rounded md:mt-0 mt-5'>
                     <span className='flex p-4 border-b-2 justify-start items-center gap-2 bg-gray-100'>
                         <MdOutlineCampaign className='text-2xl'/>
                         <h3 className='font-bold'>ব্যাবহারকারী</h3>
