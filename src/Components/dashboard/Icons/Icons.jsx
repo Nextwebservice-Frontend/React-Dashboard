@@ -1,62 +1,36 @@
-import { Accordion, AccordionDetails, AccordionSummary, Typography } from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import TerminalOutlinedIcon from '@mui/icons-material/TerminalOutlined';
-import FiberManualRecordOutlinedIcon from '@mui/icons-material/FiberManualRecordOutlined';
-
+import { AiFillCode } from "react-icons/ai";
+import { FaRegCircle } from "react-icons/fa";
 const Icons = () => {
     return (
         <div>
-            <Accordion
-                className="border"
+            <div className="collapse collapse-arrow ">
+                <input type="radio" name="my-accordion-2" defaultChecked />
+                <div className="collapse-title flex items-center gap-2 text-[#7e7e7e]">
+                <AiFillCode />  ICONS                </div>
+                <div className="collapse-content">
+                    <p className="flex gap-2 items-center text-[12px] text-[#7e7e7e] font-semibold p-2 rounded-lg hover:bg-slate-100">
 
-            >
-                <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel1-content"
-                    id="panel1-header"
-                    className="text-[14px] font-semibold"
-                >
-                    <TerminalOutlinedIcon sx={{ mr: "10px", mb: "1px", color: "#7e7e7e" }} />
+                        <FaRegCircle /> Analytics
+                    </p>
+                    <p className="flex gap-2 items-center text-[12px] text-[#7e7e7e] font-semibold p-2 rounded-lg hover:bg-slate-100">
 
-                    <Typography fontSize="large" sx={{ color: "#7e7e7e" }} >
-                        Icons
-                    </Typography>
-                </AccordionSummary>
-                <AccordionDetails className="space-y-4">
-                    <Typography
-                        component="p"
-                        className="text-[12px] text-[#7e7e7e] font-semibold p-2 rounded-lg hover:bg-slate-100 "
-                    >
-                        <FiberManualRecordOutlinedIcon fontSize="small" sx={{ mt: "-5px" }} /> Collapsed menu
-                    </Typography>
-                    <Typography
-                        component="p"
-                        className="text-[12px] text-[#7e7e7e] font-semibold p-2 rounded-lg hover:bg-slate-100"
-                    >
-                        <FiberManualRecordOutlinedIcon fontSize="small" sx={{ mt: "-5px" }} /> Content navbar
-                    </Typography>
-                    <Typography
-                        component="p"
-                        className="text-[12px] text-[#7e7e7e] font-semibold p-2 rounded-lg hover:bg-slate-100"
-                    >
-                        <FiberManualRecordOutlinedIcon fontSize="small" sx={{ mt: "-5px" }} /> Content navbar + Sidebar
-                    </Typography>
+                        <FaRegCircle /> CRM
+                    </p>
+                    <p className="flex gap-2 items-center text-[12px] text-[#7e7e7e] font-semibold p-2 rounded-lg hover:bg-slate-100">
 
-                    <Typography
-                        component="p"
-                        className="text-[12px] text-[#7e7e7e] font-semibold p-2 rounded-lg hover:bg-slate-100"
-                    >
-                        <FiberManualRecordOutlinedIcon fontSize="small" sx={{ mt: "-5px" }} />Container
-                    </Typography>
-                    <Typography
-                        component="p"
-                        className="text-[12px] text-[#7e7e7e] font-semibold p-2 rounded-lg hover:bg-slate-100"
-                    >
-                        <FiberManualRecordOutlinedIcon fontSize="small" sx={{ mt: "-5px" }} />Blank
-                    </Typography>
+                        <FaRegCircle /> eCommerce
+                    </p>
+                    <p className="flex gap-2 items-center text-[12px] text-[#7e7e7e] font-semibold p-2 rounded-lg hover:bg-slate-100">
 
-                </AccordionDetails>
-            </Accordion>
+                        <FaRegCircle /> Logistics
+                    </p>
+                    <p className="flex gap-2 items-center text-[12px] text-[#7e7e7e] font-semibold p-2 rounded-lg hover:bg-slate-100">
+
+                        <FaRegCircle /> Academy
+                    </p>
+
+                </div>
+            </div>
         </div>
     );
 };
