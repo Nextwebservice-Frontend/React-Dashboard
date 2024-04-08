@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import DashboardLayout from "../Layout/DashboardLayout";
 import Notice from "../Pages/Notice/Notice";
+import Profile from "../Pages/Profile/Profile";
 
 
 const Router = createBrowserRouter([
@@ -11,7 +12,11 @@ const Router = createBrowserRouter([
             {
                 path: '/',
                 element: <Notice />
-            }
+            },
+            {
+                path: '/profile',
+                element: <Profile />
+            },
         ]
     }
 ])

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { MdOutlineDataset } from "react-icons/md";
 import { IoListOutline } from "react-icons/io5";
 import { MdMedicalInformation } from "react-icons/md";
@@ -8,7 +8,7 @@ import { BsCash } from "react-icons/bs";
 import { MdMeetingRoom } from "react-icons/md";
 const ShortcutPopUp = ({showSortcutPopUp}) => {
     return (
-        <div className={`absolute shadow-lg rounded-lg border lg:right-32 md:right-10 right-0  -top-12 mt-10 bg-white ${showSortcutPopUp ? "popup":"hidden"}`}>
+        <div className={`absolute shadow-lg rounded-lg border lg:right-32 md:right-10 right-0 z-20 -top-12 mt-10 bg-white ${showSortcutPopUp ? "popup":"hidden"}`}>
             <span className='flex justify-between items-center min-w-80 max-w-80 text-lg p-3'>
                 Shortcut
                 <button>
