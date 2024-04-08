@@ -1,10 +1,10 @@
 import { useContext } from "react";
-import { contextData } from "../../../Providers/ContextProviders/ContextProviders";
+import { ContextData } from "../../../Providers/ContextProviders/ContextProviders";
 
 
 // eslint-disable-next-line react/prop-types
 const Logo = ({ show, setShow }) => {
-    const {showText}=useContext(contextData)
+    const {showText}=useContext(ContextData)
     const handelClose = () => {
         setShow(!show);
     }

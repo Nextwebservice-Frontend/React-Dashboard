@@ -1,36 +1,12 @@
-import { useState } from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
-import Academy from "./Academy/Academy";
-import Card from "./Card/Card";
-import Charts from "./Charts/Charts";
-import Dboard from "./Dboard/Dboard";
-import Extendedui from "./Extendedui/Extendedui";
-import FontPages from "./FontPages/FontPages";
-import Icons from "./Icons/Icons";
-import Layouts from "./Layouts/Layouts";
-import Logistic from "./Logistic/Logistic";
+
 import Logo from "./Logo/Logo";
-import Maps from "./Maps/Maps";
-import Page_Apps from "./Page_Apps/Page_Apps";
-import Ecommerce from "./eCommerce/Ecommerce";
 import "./scrollbar.css";
 import { useContext } from "react";
-import { contextData } from "../../Providers/ContextProviders/ContextProviders";
+import { ContextData } from "../../Providers/ContextProviders/ContextProviders";
 import { IoIosMenu } from "react-icons/io";
 
 // eslint-disable-next-line react/prop-types
 const Dashboard = () => {
-  const { setShow, show, showText, setShowText } = useContext(ontextData);
-  const { setShow, show, showText, setShowText } = useContext(ontextData);
-  const { setShow, show, showText, setShowText } = useContext(ontextData);
-  const { setShow, show, showText, setShowText } = useContext(ontextData);
-  const { setShow, show, showText, setShowText } = useContext(ontextData);
-  const { setShow, show, showText, setShowText } = useContext(ontextData);
-  const { setShow, show, showText, setShowText } = useContext(ontextData);
-  const { setShow, show, showText, setShowText } = useContext(ontextData);
-  const { setShow, show, showText, setShowText } = useContext(ontextData);
-  const { setShow, show, showText, setShowText } = useContext(ontextData);
-
   const { setShow, show, showText, setShowText } = useContext(ContextData);
   return (
     <div
@@ -56,19 +32,6 @@ const Dashboard = () => {
       >
         <div className="   ">
           <Logo show={show} setShow={setShow} />
-          <Dboard />
-          <Layouts />
-          <FontPages />
-
-          <Ecommerce />
-          <Logistic />
-
-          <Card />
-          <Extendedui />
-          <Icons />
-
-          <Charts />
-          <Maps />
         </div>
       </div>
     </div>
