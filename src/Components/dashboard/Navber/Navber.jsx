@@ -5,12 +5,12 @@ import avater from '../../../assets/avator.jpg'
 import ProfilePopUp from "./profile_pop_up/ProfilePopUp";
 import { useContext, useState } from "react";
 import ShortcutPopUp from "./Shortcut_pop_up/ShortcutPopUp";
-import { contextData } from "../../../Providers/ContextProviders/ContextProviders";
+import { ContextData } from "../../../Providers/ContextProviders/ContextProviders";
 const Navber = () => {
     // states 
     const [showProfiePopUp, setShowprofilePopUp] = useState(false)
     const [showSortcutPopUp, setshowSortcutPopUp] = useState(false)
-    const { setShow, show, setShowText, showText } = useContext(contextData)
+    const { setShow, show, setShowText, showText } = useContext(ContextData)
     return (
         <>
             <div className="flex justify-between items-center w-full lg:mx-5 xl:mx-10 mx-auto box-border px-8 shadow-xl py-5">

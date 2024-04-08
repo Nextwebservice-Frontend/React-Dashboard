@@ -1,10 +1,10 @@
-import React, { createContext, useState } from 'react'
+import { createContext, useState } from 'react'
 //create context
-export const contextData = createContext({})
+export const ContextData = createContext({})
 const ContextProviders = ({ children }) => {
     //states
     const [show, setShow] = useState(false)
-    const [showText, setShowText] = useState(false)
+    const [showText, setShowText] = useState(true)
     // context data
     const sharedData = {
         setShow,
@@ -13,9 +13,9 @@ const ContextProviders = ({ children }) => {
         showText
     }
     return (
-        <contextData.Provider value={sharedData}>
+        <ContextData.Provider value={sharedData}>
             {children}
-        </contextData.Provider>
+        </ContextData.Provider>
     )
 }
 

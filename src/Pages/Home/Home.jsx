@@ -1,5 +1,5 @@
-import Navber from "../dashboard/Navber/Navber";
-import Notice from "../dashboard/Notice/Notice";
+import Navber from "../../Components/dashboard/Navber/Navber";
+import Notice from "../../Components/dashboard/Notice/Notice";
 
 const Home = () => {
     return (

@@ -1,11 +1,11 @@
 import { useContext } from "react"
-import Home from "./Components/Home/Home"
+import Home from "./Pages/Home/Home"
+import { ContextData } from "./Providers/ContextProviders/ContextProviders"
 import Dashboard from "./Components/dashboard/Dashboard"
-import { contextData } from "./Providers/ContextProviders/ContextProviders"
 
 
 function App() {
-  const {showText}=useContext(contextData)
+  const {showText}=useContext(ContextData)
 
   return (
     <>
